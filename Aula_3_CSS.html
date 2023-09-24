@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Seletores</title>
+
+        <style> /*Modo de chamado CSS interno*/
+
+            article { /*TAG*/
+                width: 200px;
+                margin: 0 auto; /*Espaço automático para acompanhar o width*/
+            }
+
+            .container { /*CLASS*/
+                background: red;
+            }
+
+            #texto-1{ /*ID*/
+                color: white;
+            }
+
+            #texto-2{ /*ID*/
+                color: yellow;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    
+    <body>
+
+        <!--
+        Principais seletores CSS 
+        Tags: nome-da-tag
+        Id: #nome-do-id
+        Class: .nome-da-class
+        --> 
+
+        <article>
+            <section class="container">
+                <p id="texto-1">
+                    Aqui é um novo texto 1.
+                </p>
+            </section>
+
+            <section class="container">
+                <p id="texto-2">
+                    Aqui é um novo texto 1.
+                </p>
+            </section>
+        </article>
+
+    </body>
+</html>

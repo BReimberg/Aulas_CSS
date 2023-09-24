@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Especificidade</title>
+
+        <style>
+            /* 0.0.1.1 */
+            p{
+                color:red;
+            }
+
+            /* 0.0.1.1 */
+            .nova-cor{
+                color: green;
+            }
+
+            /* 0.1.0.1 */
+            #nova-cor-id-1, 
+            #nova-cor-id-2{
+                color: purple;
+                /* Se colocar a class junto ao id ele soma e muda o binário para 0.1.1.1 */
+            }
+
+        </style>
+
+    </head>
+    
+    <body>
+
+       <!--
+       Grau de importância: o maior é  1000 (0.0.0.0)
+
+       Esse valor representa binários de importância:
+
+        0       0       0       0
+      inline    Id    Class    Tags
+
+       Se criarmos um elemento no CSS ex:
+
+       p {
+         color: red;
+       }
+
+       O binário vai ganhar grau de importância, ficando: 0.0.0.1
+
+       Se inserir o inline no <p> do HTML o binário será atualizado e ganhará grau de importância
+       mudando para 1.0.0.1
+         <p style="color: pink"> Texto</p> -->
+
+        <p>Texto 1.</p>
+        <p class="nova-cor">Texto 2.</p>
+        <p class="nova-cor">Texto 3.</p>
+        <p id="nova-cor-id-1">Texto 4.</p>
+
+        <!-- O inline soma ao resto do CSS tornando o binário em: 1.1.1.1 -->
+        <p id="nova-cor-id-2" style="color: darkorange;">Texto 5.</p>
+
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Herança</title>
+
+        <style>
+            article{
+                font-size: 30px;
+                color: blueviolet;
+            }
+
+            article section article p{
+                color: chocolate;
+            }
+        </style>    
+    </head>
+    
+    <body>
+
+        <!-- Nos códigos temos um emaranhado de Tags:
+        <article> = pai
+            <p>Texto Pai</p> = Texto Pai
+            <section> = Filho
+                <p>Texto Filho</p> = Texto Filho
+
+                <ul> = Lista Filho
+                    <li>1</li>
+                    <li>2</li> = Lista filho
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+                <div> = Neto
+                    <p>Texto Neto</p> = Texto Filho
+                </div>
+            </section>
+        </article>
+        -->
+
+        <article>
+
+            <section>
+                <p>
+                    Filha
+                </p>
+                <article>
+                    <p>
+                       Neto filho da filha 
+                    </p>
+                </article>
+            </section>
+
+            <section>
+                <p>
+                    Filho
+                </p>
+                <article>
+                    <p>
+                       Neto filho da Filho 
+                    </p>
+                </article>
+            </section>
+
+        </article>
+
+    </body>
+</html>
